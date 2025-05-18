@@ -10,7 +10,7 @@ seaweedfs.com
 
 ```
 appjail makejail -j seaweedfs -f gh+AppJail-makejails/seaweedfs
-appjail cmd jexec seaweedfs /weed/weed -help
+appjail cmd jexec seaweedfs -U seaweedfs ./weed -help
 ```
 
 ### Arguments
