@@ -1,0 +1,1 @@
+OPTION volume=seaweedfs-data mountpoint:/data owner:1001 group:1001
