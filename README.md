@@ -23,4 +23,4 @@ appjail cmd jexec seaweedfs -U seaweedfs ./weed -help
 | Tag           | Arch    | Version            | Type   |
 | ------------- | --------| ------------------ | ------ |
 | `13.5`    | `amd64` | `13.5-RELEASE` | `thin` |
-| `14.2`    | `amd64` | `14.2-RELEASE` | `thin` |
+| `14.3`    | `amd64` | `14.3-RELEASE` | `thin` |
