@@ -11,10 +11,6 @@ USER seaweedfs
 
 RUN git clone --depth 1 https://github.com/seaweedfs/seaweedfs.git /weed/src
 
-COPY files/seaweedfs.patch /weed/src
-
-CMD (cd /weed/src; patch < seaweedfs.patch)
-
 WORKDIR /weed/src/weed
 
 RUN go124 install -ldflags="-s -w"
