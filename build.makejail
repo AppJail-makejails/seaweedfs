@@ -1,24 +1,4 @@
 INCLUDE options/options.makejail
 INCLUDE options/volumes.makejail
 
-PKG go124 git-tiny
-
-CMD pw useradd -n seaweedfs -d /weed -s /bin/sh
-CMD mkdir -p /weed
-CMD chown seaweedfs:seaweedfs /weed
-
-USER seaweedfs
-
-RUN git clone --depth 1 https://github.com/seaweedfs/seaweedfs.git /weed/src
-
-WORKDIR /weed/src/weed
-
-RUN go124 install -ldflags="-s -w"
-
-CMD cp -a /weed/go/bin/weed /weed/weed
-
-CMD rm -rf /weed/.cache /weed/.config /weed/go /weed/src
-
-PKG --remove go124 git-tiny
-PKG --autoremove
-PKG --clean
+PKG seaweedfs

@@ -1,1 +1,1 @@
-OPTION volume=seaweedfs-data mountpoint:/data owner:1001 group:1001
+OPTION volume=seaweedfs-db mountpoint:/var/db/seaweedfs owner:273 group:273

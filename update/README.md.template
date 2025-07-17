@@ -10,13 +10,19 @@ seaweedfs.com
 
 ```
 appjail makejail -j seaweedfs -f gh+AppJail-makejails/seaweedfs
-appjail cmd jexec seaweedfs -U seaweedfs ./weed -help
+appjail cmd jexec seaweedfs weed -help
 ```
 
 ### Arguments
 
 * `seaweedfs_ajspec` (default: `gh+AppJail-makejails/seaweedfs`): Entry point where the `appjail-ajspec(5)` file is located.
 * `seaweedfs_tag` (default: `%%TAG1%%`): see [#tags](#tags).
+
+### Volumes
+
+| Name         | Owner | Group | Perm | Type | Mountpoint         |
+| ------------ | ----- | ----- | ---- | ---- | ------------------ |
+| seaweedfs-db | 273   | 273   |  -   |  -   | /var/db/seaweedfs  |
 
 ## Tags
 
