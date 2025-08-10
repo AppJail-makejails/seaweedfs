@@ -1,16 +1,17 @@
 tags+: 13.5
 13.5.arch: amd64
 13.5.name: "seaweedfs"
-13.5.timestamp.amd64: 1753046149
-13.5.sum.amd64: 23a0e568e470e1ced7b125a763e8eab6b41d0e5bfff364164265399095c35f8b
-13.5.size.amd64: 68646560
+13.5.timestamp.amd64: 1754860604
+13.5.sum.amd64: b5792e149c9a458cba4563c254dc6471e5007d844e13ee2596ecbd80ae1ef073
+13.5.size.amd64: 68899431
 13.5.source.amd64: "https://images.all101bsd.download/seaweedfs/13.5-amd64-image.appjail"
 13.5.source.amd64+: "http://appjail.hpc.at/seaweedfs/13.5-amd64-image.appjail"
 tags+: 14.3
 14.3.arch: amd64
 14.3.name: "seaweedfs"
-14.3.timestamp.amd64: 1753046367
-14.3.sum.amd64: b3401aab6a723946e545d449beba1697cb630df7e9b2f46bf1e0d0d6d778be63
-14.3.size.amd64: 68448543
+14.3.timestamp.amd64: 1754860817
+14.3.sum.amd64: e3f5658fa2157fe29fdf9e4c4c6a4fc4bc3a53c4bd648e757842b81a37ca5410
+14.3.size.amd64: 68641799
 14.3.source.amd64: "https://images.all101bsd.download/seaweedfs/14.3-amd64-image.appjail"
 14.3.source.amd64+: "http://appjail.hpc.at/seaweedfs/14.3-amd64-image.appjail"
+maintenance: "This image is uploading, please wait a moment and try again. If you are importing this image using a Makejail that has the '--<name>_ajspec' argument, you can use the 'reproduce' method to use 'appjail-reproduce'. See 'appjail-image(5)' for details."
