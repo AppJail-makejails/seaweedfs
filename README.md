@@ -16,7 +16,7 @@ appjail cmd jexec seaweedfs weed -help
 ### Arguments
 
 * `seaweedfs_ajspec` (default: `gh+AppJail-makejails/seaweedfs`): Entry point where the `appjail-ajspec(5)` file is located.
-* `seaweedfs_tag` (default: `13.5`): see [#tags](#tags).
+* `seaweedfs_tag` (default: `14.3`): see [#tags](#tags).
 
 ### Volumes
 
@@ -28,5 +28,5 @@ appjail cmd jexec seaweedfs weed -help
 
 | Tag           | Arch    | Version            | Type   |
 | ------------- | --------| ------------------ | ------ |
-| `13.5`    | `amd64` | `13.5-RELEASE` | `thin` |
 | `14.3`    | `amd64` | `14.3-RELEASE` | `thin` |
+| `15`    | `amd64` | `15` | `thin` |

@@ -1,6 +1,6 @@
 INCLUDE options/options.makejail
 
-ARG seaweedfs_tag=13.5
+ARG seaweedfs_tag=14.3
 ARG seaweedfs_ajspec=gh+AppJail-makejails/seaweedfs
 
 FROM --entrypoint "${seaweedfs_ajspec}" seaweedfs:${seaweedfs_tag}
