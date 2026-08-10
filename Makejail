@@ -1,6 +1,6 @@
-INCLUDE options/options.makejail
+ARG seaweedfs_from=ghcr.io/appjail-makejails/seaweedfs
+ARG seaweedfs_tag=latest
 
-ARG seaweedfs_tag=14.3
-ARG seaweedfs_ajspec=gh+AppJail-makejails/seaweedfs
-
-FROM --entrypoint "${seaweedfs_ajspec}" seaweedfs:${seaweedfs_tag}
+OPTION container=boot
+OPTION overwrite=force
+OPTION from=${seaweedfs_from}:${seaweedfs_tag}

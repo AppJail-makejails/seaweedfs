@@ -1,1 +1,0 @@
-OPTION volume=seaweedfs-db mountpoint:/var/db/seaweedfs owner:273 group:273
