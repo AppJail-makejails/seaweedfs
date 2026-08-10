@@ -47,7 +47,7 @@ $ appjail oci exec weed-mini weed shell <<< "s3.bucket.create -name another-buck
 $ appjail oci exec weed-mini weed shell <<< "s3.bucket.list"
 ```
 
-For an interactive prompt: `appjail oci exec seaweedfs weed shell`, then `help`.
+For an interactive prompt: `appjail oci exec weed-mini weed shell`, then `help`.
 
 ### Deploy using `appjail-director`
 
