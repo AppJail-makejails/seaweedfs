@@ -107,6 +107,43 @@ services:
       - depend: seaweedfs-volume
       - depend: seaweedfs-filer
       - container: 'args:--pull'
+  prometheus:
+    name: seaweedfs-prometheus
+    makejail: gh+AppJail-makejails/prometheus
+    priority: 103
+    oci:
+      arguments: ['--web.enable-lifecycle', '--config.file=/usr/local/etc/prometheus.yml']
+    options:
+      - depend: seaweedfs-master
+      - depend: seaweedfs-volume
+      - depend: seaweedfs-filer
+      - depend: seaweedfs-s3
+      - container: 'args:--pull'
+    volumes:
+      - prometheus-config: usr/local/etc/prometheus.yml
+
+volumes:
+  prometheus-config:
+    device: !ENV '${PWD}/prometheus.yml'
+```
+
+**prometheus.yml**:
+
+```yaml
+global:
+  scrape_interval: 30s
+  scrape_timeout: 10s
+
+scrape_configs:
+  - job_name: services
+    metrics_path: /metrics
+    static_configs:
+      - targets:
+          - 'seaweedfs-prometheus:9090'
+          - 'seaweedfs-master:9324'
+          - 'seaweedfs-volume:9325'
+          - 'seaweedfs-filer:9326'
+          - 'seaweedfs-s3:9327'
 ```
 
 **Console**:
@@ -123,12 +160,15 @@ Starting volume (seaweedfs-volume) ... Done.
 Creating filer (seaweedfs-filer) ... Done.
  - Configuring arguments (OCI) ... Done.
 Starting filer (seaweedfs-filer) ... Done.
-Creating s3 (seaweedfs-s3) ... Done.
- - Configuring arguments (OCI) ... Done.
-Starting s3 (seaweedfs-s3) ... Done.
 Creating webdav (seaweedfs-webdav) ... Done.
  - Configuring arguments (OCI) ... Done.
 Starting webdav (seaweedfs-webdav) ... Done.
+Creating s3 (seaweedfs-s3) ... Done.
+ - Configuring arguments (OCI) ... Done.
+Starting s3 (seaweedfs-s3) ... Done.
+Creating prometheus (seaweedfs-prometheus) ... Done.
+ - Configuring arguments (OCI) ... Done.
+Starting prometheus (seaweedfs-prometheus) ... Done.
 Finished: seaweedfs
 ```
 
