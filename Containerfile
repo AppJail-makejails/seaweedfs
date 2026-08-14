@@ -14,7 +14,7 @@ LABEL org.opencontainers.image.title="SeaweedFS" \
 RUN set -xe; \
     \
     pkg update; \
-    pkg install -U seaweedfs; \
+    pkg install seaweedfs; \
     \
     if [ -z "${NO_PKGCLEAN}" ]; then \
         pkg clean -a; \
